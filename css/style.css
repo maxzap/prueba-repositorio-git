@@ -1,0 +1,175 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  background-image: url(../images/bg-body.png);
+  /*hace que el contenido alcance toda la pantalla*/
+  margin: auto;
+}
+ul, ol{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+img{
+  width: 100%;
+}
+.container{
+  margin: 0 15px;
+}
+.banner{
+  display: none;
+}
+.logo{
+  display: block;
+  /*solo funciona con elemento de bloques, y posiciona al elemento en el medio de la pantalla*/
+  margin: 15px auto 30px;
+  /*transdforma la imagen a circulor*/
+  border-radius: 50%;
+  border: solid 1px #000;
+  max-width: 180px;
+}
+.toggle-nav{
+  display: block;
+  margin: 0 auto 15px;
+  background-color: #222;
+  width: 45px;
+  text-align: center;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 1.2em;
+}
+.main-nav{
+  display: none;
+}
+.main-nav a{
+  display: block;
+  background-color: #222;
+  color: #fff;
+  font-size: 1.4em;
+  padding: 15px 0;
+  margin-bottom: 3px;
+  text-align: center;
+}
+.product a{
+  background-color: #222;
+  color: #fff;
+  display: inline-block;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+.main-footer  a{
+  display: block;
+  background-color: #b93131;
+  color: #fff;
+  font-size: 1.4em;
+  padding: 15px 0;
+  margin-bottom: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: 700px) {
+  .container{
+    /*Utilizamos estos margin para centrar los elementos horizontalmente*/
+  margin left: auto;
+  margin right: auto;
+  max-width: 1200px;
+  }
+  .banner{
+    display: block;
+    margin-left: 0.83%;
+    margin-right: 0.83%;
+
+  }
+  .toggle-nav{
+    display: none;
+  }
+  .main-nav{
+    /*El overflow: hidden solo funciona con el padre que flota*/
+    /*La propiedad !Importan le da prioridad a la linea que la posea, ninguna otra declaración puede pisar esa orden*/
+    display: block !important;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+  /*.main-nav ul{
+    margin: 0;
+    padding: 0;
+  }*/
+  .main-nav li{
+    display: inline-block;
+    float: left;
+    width: 15%;
+    margin: 0 0.83%;
+  }
+  .main-nav a{
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2em;
+    border: none;
+  }
+  .vip-products{
+    overflow: hidden;
+    /*display: block;
+    text-align: center;*/
+  }
+  .product{
+    /*los productos tiene que sumar el 50mporciento de la pantalla para que todos los elementos esten alineados en la pantalla*/
+    width: 48.33%;
+    margin-left: 0.83%;
+    margin-right: 0.83%;
+    float: left;
+    margin-top: 40px;
+    /**/
+    /*float: left;
+    width: 31.6666667VW;
+    margin: 2.5vh 0.9vw;*/
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .product{
+    /*los productos tiene que sumar el 50mporciento de la pantalla para que todos los elementos esten alineados en la pantalla*/
+    width: 31.67%;
+    float: left;
+    margin-top: 40px;
+    /**/
+    /*float: left;
+    width: 31.6666667VW;
+    margin: 2.5vh 0.9vw;*/
+  }
+  .main-footer{
+    display: block;
+    width: 100%;
+    background-color: #d21c1c;
+    text-align: center;
+    border-radius: 25px 25px 0 0 / 25px;
+    padding: 40px 0;
+  }
+  /*.main-footer ul{
+    margin: auto;
+    padding: auto;
+  }*/
+  .main-footer li{
+    display: inline-block;
+  }
+  .main-footer  a{
+    background-color: #d21c1c;
+    color: #fff;
+    font-size: 0.8em;
+    text-transform: capitalize;
+    border-right: solid  1px white;
+    padding: 0 25px 0 24px;
+  }
+  .main-footer  .last{
+    border-right: none;
+  }
+
+}
